@@ -1,0 +1,133 @@
+{
+  "id": "Composthoekjes",
+  "title": {
+    "nl": "Composthoekjes"
+  },
+  "shortDescription": {
+    "nl": "Composthoekjes"
+  },
+  "description": {
+    "nl": "Composthoekjes beheerd door vrijwilligers."
+  },
+  "language": [
+    "nl"
+  ],
+  "maintainer": "",
+  "icon": "https://upload.wikimedia.org/wikipedia/commons/1/15/Compost_…able_waste_-_biodegradable_waste_-_biological_waste_icon.png",
+  "version": "0",
+  "startLat": 0,
+  "startLon": 0,
+  "startZoom": 1,
+  "widenFactor": 0.05,
+  "socialImage": "",
+  "layers": [
+    {
+      "id": "Composthoekjes",
+      "name": {
+        "nl": "Composthoekjes"
+      },
+      "minzoom": 12,
+      "title": {
+        "render": {
+          "nl": "Composthoekje"
+        },
+        "mappings": [
+          {
+            "if": {
+              "and": [
+                "name~*"
+              ]
+            },
+            "then": {
+              "nl": "{name}"
+            }
+          }
+        ]
+      },
+      "allowMove": true,
+      "deletion": {},
+      "tagRenderings": [
+        "images",
+        {
+          "freeform": {
+            "key": "opening_hours",
+            "type": "opening_hours",
+            "addExtraTags": []
+          },
+          "question": {
+            "nl": "Wat zijn de openingsuren?"
+          },
+          "render": {
+            "nl": "{opening_hours_table()}"
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "opening_hours=\"by appointment\""
+                ]
+              },
+              "then": {
+                "nl": "Op afspraak"
+              }
+            }
+          ],
+          "id": "Composthoekjes-opening_hours"
+        },
+        {
+          "question": {
+            "nl": "Wat is de website voor meer informatie?"
+          },
+          "freeform": {
+            "key": "website",
+            "type": "url"
+          },
+          "render": {
+            "nl": "<a href=\"{website}\">{website}</a>"
+          },
+          "id": "Composthoekjes-website"
+        }
+      ],
+      "hideUnderlayingFeaturesMinPercentage": 0,
+      "presets": [
+        {
+          "tags": [
+            "amenity=recycling",
+            "recycling:organic=yes"
+          ],
+          "title": {
+            "nl": "een inzamelpunt voor organisch afval"
+          }
+        }
+      ],
+      "source": {
+        "osmTags": {
+          "and": [
+            "recycling:organic=yes"
+          ]
+        }
+      },
+      "mapRendering": [
+        {
+          "icon": {
+            "render": "circle:white;https://upload.wikimedia.org/wikipedia/commons/1/15/Compost_…able_waste_-_biodegradable_waste_-_biological_waste_icon.png"
+          },
+          "iconSize": {
+            "render": "40,40,center"
+          },
+          "location": [
+            "point"
+          ]
+        },
+        {
+          "color": {
+            "render": "#00f"
+          },
+          "width": {
+            "render": "8"
+          }
+        }
+      ]
+    }
+  ]
+}
