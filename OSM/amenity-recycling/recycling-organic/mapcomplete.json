@@ -133,7 +133,7 @@
 		  {
 			  "if":"access=residents",
 			  "then":"Bewoners van gemeente",
-			  "hideInAnswer":"recyling_type!=centre"
+			  "hideInAnswer":"recycling_type!=centre"
 		  }
 		  
 		  ],
