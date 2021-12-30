@@ -1,13 +1,13 @@
 {
-  "id": "Composthoekjes",
+  "id": "recycling-organic",
   "title": {
-    "nl": "Composthoekjes"
+    "nl": "Inzamelpunt organisch alval"
   },
   "shortDescription": {
-    "nl": "Composthoekjes"
+    "nl": "Inzamelpunt organisch alval"
   },
   "description": {
-    "nl": "Composthoekjes beheerd door vrijwilligers."
+    "nl": "Op deze kaart vindt u inzamelpunten voor organisch afval. Beheer deze naar goeddunken en vermogen."
   },
   "language": [
     "nl"
@@ -22,14 +22,14 @@
   "socialImage": "",
   "layers": [
     {
-      "id": "Composthoekjes",
+      "id": "recycling-organic",
       "name": {
-        "nl": "Composthoekjes"
+        "nl": "Inzamelpunt organisch alval"
       },
       "minzoom": 12,
       "title": {
         "render": {
-          "nl": "Composthoekje"
+          "nl": "Inzamelpunt organisch alval"
         },
         "mappings": [
           {
@@ -86,9 +86,28 @@
             "nl": "<a href=\"{website}\">{website}</a>"
           },
           "id": "Composthoekjes-website"
-        }
-      ],
-      "hideUnderlayingFeaturesMinPercentage": 0,
+        },
+		{
+		  "question": {
+            "nl": "Wat is het type inzamelpunt?"
+          },
+		  "mappings":[
+		  {
+			  "if":"recycling_type=container",
+			  "then":"Container of vat"
+		  },
+		  {
+			  "if":"recycling_type=centre",
+			  "then":"Verwerkingsplaats of containerpark"
+		  },
+		  {
+			  "if":"recycling_type=dump",
+			  "then":"Composthoop"
+		  }
+		  
+		  ],
+          "id": "Composthoekjes-type"
+		}],
       "presets": [
         {
           "tags": [
