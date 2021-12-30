@@ -108,6 +108,37 @@
 		  ],
           "id": "Composthoekjes-type"
 		}],
+		{
+		  "question": {
+            "nl": "Wie mag hier organisch afval bezorgen?"
+          },
+		  "mappings":[
+		  {
+			  "if":"access=yes",
+			  "then":"Publiek toegankelijk"
+		  },
+		  {
+			  "if":"access=no",
+			  "then":"Privaat"
+		  },
+		  {
+			  "if":"access=permessive",
+			  "then":"Mogelijks toegelaten tot nader order"
+		  },
+		  {
+			  "if":"access=",
+			  "then":"Waarschijnlijk publiek toegankelijk",
+			  "hideInAnswer":true
+		  },
+		  {
+			  "if":"access=residents",
+			  "then":"Bewoners van gemeente",
+			  "hideInAnswer":"recyling_type!=centre"
+		  }
+		  
+		  ],
+          "id": "Composthoekjes-voor-wie"
+		}],
       "presets": [
         {
           "tags": [
