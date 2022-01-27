@@ -138,7 +138,31 @@
 		  
 		  ],
           "id": "Composthoekjes-voor-wie"
-		}],
+		},
+		{
+          "question": {
+            "nl": "Wat is de naam van dit compost-inzamelpunt?"
+          },
+          "freeform": {
+            "key": "name"
+			"addExtraTags": ["noname="]
+          },
+          "render": {
+            "nl": "De naam van dit compost-inzamelpunt is {name}"
+          },
+          "mappings":[
+		  {
+			  "if":{"and":["noname=yes","name="]},
+			  "then":"Heeft geen naam"
+		  },
+		  {
+			  "if":"name=",
+			  "then":"Geen naam bekend",
+			  "hideInAnswer":true
+		  }
+		  ],
+		  "id": "Composthoekjes-name"
+        }],
       "presets": [
         {
           "tags": [
