@@ -144,7 +144,7 @@
             "nl": "Wat is de naam van dit compost-inzamelpunt?"
           },
           "freeform": {
-            "key": "name"
+            "key": "name",
 			"addExtraTags": ["noname="]
           },
           "render": {
@@ -177,7 +177,7 @@
       "source": {
         "osmTags": {
           "and": [
-            "recycling:organic=yes"
+            "recycling:organic~*"
           ]
         }
       },
